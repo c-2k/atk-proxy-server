@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla|Nunito+Sans|Poppins|Roboto|Roboto+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Homestead</title>
+  </head>
+  <body>
+    <div id="photos"></div>
+    <div class="app-wrapper">
+      <div id="details"></div>
+      <div id="reviews"></div>
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/hs-photogallery/bundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/hs-details/bundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/hs-reviews/bundle.js"></script>
+    <script>
+      ReactDOM.render(
+        React.createElement(Gallery),
+        document.getElementById('photos')
+      );
+      ReactDOM.render(
+        React.createElement(Details),
+        document.getElementById('details')
+      );
+      ReactDOM.render(
+        React.createElement(Reviews),
+        document.getElementById('reviews')
+      );
+    </script>
+  </body>
+</html>
